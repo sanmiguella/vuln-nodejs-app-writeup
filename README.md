@@ -1,1 +1,1 @@
-# -vuln-nodejs-app-writeup
+# vuln-nodejs-app-writeup
